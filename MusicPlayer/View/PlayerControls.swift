@@ -35,14 +35,14 @@ class PlayerControls: UIView {
   private var isPlaying: Bool = false
 
   // MARK: - UI Components
-  private let playButton: UIButton = {
+  private lazy var playButton: UIButton = {
     let button = UIButton(type: .custom)
     button.addTarget(self, action: #selector(playButtonPressed), for: .touchUpInside)
     button.translatesAutoresizingMaskIntoConstraints = false
     return button
   }()
 
-  private let prevButton: UIButton = {
+  private lazy var prevButton: UIButton = {
     let button = UIButton(type: .custom)
     button.addTarget(self, action: #selector(prevButtonPressed), for: .touchUpInside)
 
@@ -52,7 +52,7 @@ class PlayerControls: UIView {
     return button
   }()
 
-  private let nextButton: UIButton = {
+  private lazy var nextButton: UIButton = {
     let button = UIButton(type: .custom)
     button.addTarget(self, action: #selector(nextButtonPressed), for: .touchUpInside)
 
