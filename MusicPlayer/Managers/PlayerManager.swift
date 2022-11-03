@@ -8,7 +8,7 @@
 import Foundation
 import AVFoundation
 
-protocol PlayerManagerDelegate: class {
+protocol PlayerManagerDelegate: AnyObject {
     func didFinishPlaying()
     func currentTime(_ seconds: Int)
     func totalSecondsDuration(_ seconds: Double)
